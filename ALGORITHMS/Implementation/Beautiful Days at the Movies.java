@@ -1,29 +1,76 @@
-//Problem: https://www.hackerrank.com/challenges/beautiful-days-at-the-movies
-//Java 8
 import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
 import java.util.*;
-
+import java.util.concurrent.*;
+import java.util.regex.*;
+import java.lang.Math;
 public class Solution {
 
-    public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-        Scanner input = new Scanner(System.in);
-        int i = input.nextInt();
-        int j = input.nextInt();
-        int k = input.nextInt();
+    
+    static int beautifulDays(int i, int j, int k) 
+    {
         
-        int beautifulDays = 0;
+        int reverse=0;
+        int count=0;
+        int m;
         
-        for(int x = i; x <= j; x++)
+        
+        for(int num=i;num<=j;num++)
         {
-            StringBuilder day = new StringBuilder(String.valueOf(x));
-            int xReverse = Integer.parseInt(day.reverse().toString());
-                
-            if(Math.abs(x-xReverse) % k == 0)
+            
+            m=num;
+            reverse=0;
+            
+            while(m!=0)
             {
-                beautifulDays++;
+                reverse = reverse * 10;
+                reverse = reverse + m%10;
+                m = m/10;
             }
+            
+
+            if(Math.abs(num-reverse)%k==0)
+            {
+                count++;
+            }
+            
         }
-        System.out.println(beautifulDays);
+
+        
+        return count;
+
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException 
+    {
+        
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        
+
+        String[] ijk = scanner.nextLine().split(" ");
+        
+
+        int i = Integer.parseInt(ijk[0]);
+
+        int j = Integer.parseInt(ijk[1]);
+
+        int k = Integer.parseInt(ijk[2]);
+
+        int result = beautifulDays(i, j, k);
+        
+
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
+
+        bufferedWriter.close();
+        
+
+        scanner.close();
+        
+        
     }
 }
