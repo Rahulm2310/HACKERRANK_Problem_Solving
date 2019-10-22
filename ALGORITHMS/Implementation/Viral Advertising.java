@@ -1,20 +1,59 @@
 import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
 import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
 
 public class Solution {
 
-    public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-        Scanner input = new Scanner(System.in);
-        int n = input.nextInt();
+    
+    static int viralAdvertising(int n)
+    {
         
-        //We can intialize to day 1 values since 1<= n <= 50
-        int peopleReached = 2, peopleSharing = 2;
-        for(int i = 1; i < n; i++)
+        int recipients=5;
+        int likes=0;
+        int totallikes=0;
+        
+        
+        for(int i=0;i<n;i++)
         {
-            peopleReached += (peopleSharing * 3) / 2;
-            peopleSharing = (peopleSharing * 3) / 2;
+            
+            likes=(recipients/2);
+            recipients=likes*3;
+            totallikes+=likes;
+            
         }
-        System.out.println(peopleReached);
+
+        
+        return totallikes;
+        
+    }
+
+    
+    
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException 
+    {
+        
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int n = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        
+
+        int result = viralAdvertising(n);
+
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
+
+        
+        bufferedWriter.close();
+
+        scanner.close();
+        
+        
     }
 }
