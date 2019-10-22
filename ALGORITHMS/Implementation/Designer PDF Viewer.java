@@ -1,30 +1,80 @@
 import java.io.*;
-import java.util.*;
-import java.text.*;
 import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
 import java.util.regex.*;
 
 public class Solution {
 
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = 26;
-        int h[] = new int[n];
-        for(int h_i=0; h_i < n; h_i++){
-            h[h_i] = in.nextInt();
-        }
-        String word = in.next();
+   
+    static int designerPdfViewer(int[] h, String word)
+    {
+            char letter='a';
+            int maxheight=0;
         
-        int maxHeight = 0;//Initialized to 0 because it is below the minimum range for height
-        
-        for(int i = 0; i < word.length(); i++)
+        for(int i=0;i<word.length();i++)
         {
-            if(maxHeight < h[word.charAt(i)-97]) //  determines if the height of the current letter is greater than max so far
-            {                                    //97 is subtracted because we are using the int value of our letter for indexing
-                 maxHeight = h[word.charAt(i)-97];
+            for(int j=0;j<h.length;j++)
+            {
+                letter=(char)(97+j);
+                
+                if(word.charAt(i)==letter)
+                {
+                    if(maxheight<h[j])
+                    {
+                        
+                        maxheight=h[j];
+                        
+                    }
+                    
+                }
+                
             }
+            
         }
+
+        return (maxheight*word.length());
         
-        System.out.println(word.length() * maxHeight);
+    }
+    
+    
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException
+    {
+        
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int[] h = new int[26];
+        
+
+        String[] hItems = scanner.nextLine().split(" ");
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        
+        for (int i = 0; i < 26; i++)
+        {
+            
+            int hItem = Integer.parseInt(hItems[i]);
+            h[i] = hItem;
+            
+        }
+
+        
+        String word = scanner.nextLine();
+
+        int result = designerPdfViewer(h, word);
+
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
+
+        bufferedWriter.close();
+
+        
+        scanner.close();
+        
     }
 }
