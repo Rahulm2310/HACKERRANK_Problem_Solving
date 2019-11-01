@@ -46,6 +46,7 @@ public class Solution {
                 }
             }
         }
+        
         System.out.println(maxSkills + "\n" + maxSkillTeams);
     }
 }
