@@ -8,7 +8,7 @@ import java.util.regex.*;
 
 public class Solution {
 
-    // Complete the angryProfessor function below.
+
     static String angryProfessor(int k, int[] a) {
         int present=0;
         String s=new String("");
