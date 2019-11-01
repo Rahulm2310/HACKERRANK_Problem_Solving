@@ -56,7 +56,7 @@ public class Solution {
                 }
             }
             
-            //if it is odd check to see if we have a number for the middle index
+            
             if(n % 2 == 1)
             {
                 int middle = (n/2) + 1;
