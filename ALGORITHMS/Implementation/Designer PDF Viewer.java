@@ -11,6 +11,7 @@ public class Solution {
    
     static int designerPdfViewer(int[] h, String word)
     {
+       
             char letter='a';
             int maxheight=0;
         
