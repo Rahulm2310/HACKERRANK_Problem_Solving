@@ -31,6 +31,7 @@ public class Solution {
                 }
             }
             
+            
             //NO if we dont have at least 2 of ever color
             for(Map.Entry<Character,Integer> frequency : colorFreq.entrySet())
             {                
