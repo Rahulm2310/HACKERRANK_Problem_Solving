@@ -14,6 +14,7 @@ public class Solution {
         
         String s=new String("");
         
+        
         if(Math.abs(z-x)>Math.abs(z-y))
         {
             s="Cat B";
