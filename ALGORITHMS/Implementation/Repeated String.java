@@ -11,8 +11,10 @@ public class Solution {
         String s = in.next();
         long n = in.nextLong();
         
+        
         long countForSubstring = 0;
         long totalCount = 0;
+        
         
         //Determines how many a's are in a substring
         for(int i = 0; i < s.length(); i++)
