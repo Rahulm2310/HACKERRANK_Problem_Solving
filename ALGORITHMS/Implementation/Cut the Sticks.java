@@ -25,6 +25,7 @@ public class Solution {
                     evenlyDivisibleDigits++;
                 }
             }
+            
             System.out.println(evenlyDivisibleDigits);
         }
     }
