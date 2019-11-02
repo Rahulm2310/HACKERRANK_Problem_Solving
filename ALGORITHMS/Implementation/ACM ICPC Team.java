@@ -13,7 +13,7 @@ public class Solution {
         String[] skills = new String[n];
         int maxSkills = 0;
         int maxSkillTeams = 0;
-        input.nextLine(); //advances the past the first line of input integers
+        input.nextLine(); //advances the past  the first line of input  integers
         
         for(int i = 0; i < n; i++)
         {
