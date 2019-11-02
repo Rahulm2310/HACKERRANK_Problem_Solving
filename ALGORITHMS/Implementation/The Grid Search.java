@@ -8,9 +8,11 @@ public class Solution {
         Scanner input = new Scanner(System.in);
         int T = input.nextInt();
         
+        
         tests: 
         for(int t = 0; t < T; t++)
         {
+            
             /*                 INITIALIZE GRID AND PATTERN                 */
             /////////////////////////////////////////////////////////////////
             int R = input.nextInt();
