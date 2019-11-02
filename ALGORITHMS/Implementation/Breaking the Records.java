@@ -11,6 +11,7 @@ public class Solution {
    
     static int[] breakingRecords(int[] scores) {
     
+       
         int max=scores[0],min=scores[0];
         int maxcount=0,mincount=0;
         int arr[]=new int[2];
