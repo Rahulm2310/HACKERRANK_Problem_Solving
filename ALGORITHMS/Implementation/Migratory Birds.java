@@ -15,6 +15,7 @@ public class Solution {
     
     static int migratoryBirds(List<Integer> arr)
     {
+        
         int count[]={0,0,0,0,0};
         int max=0;
         int k;
