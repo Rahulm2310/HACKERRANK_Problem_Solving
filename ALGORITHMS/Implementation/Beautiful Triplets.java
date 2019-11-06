@@ -26,6 +26,7 @@ public class Solution {
         }
         
         
+        
         //Check if set has a value, value+d, and value + 2d
         for(Integer digit : values)
         {
