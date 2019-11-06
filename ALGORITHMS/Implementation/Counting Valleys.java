@@ -12,6 +12,7 @@ public class Solution {
     static int countingValleys(int n, String s) 
     {
     
+        
         int level=0;
         int valleycount=0;
         
