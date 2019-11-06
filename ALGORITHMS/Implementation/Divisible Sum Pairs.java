@@ -6,7 +6,8 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
 
-public class Solution {
+public class Solution
+{
 
     
     static int divisibleSumPairs(int n, int k, int[] ar)
