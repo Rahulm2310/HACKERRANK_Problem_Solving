@@ -12,9 +12,11 @@ public class Solution {
         
         for(int i = 0; i < T; i++)
         {
+            
             String numberString = String.valueOf(input.nextInt());
             int numberInteger = Integer.parseInt(numberString);
             int evenlyDivisibleDigits = 0;
+            
             
             for(int j = 0; j < numberString.length(); j++)
             {
