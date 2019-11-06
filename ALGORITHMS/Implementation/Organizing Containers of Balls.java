@@ -20,7 +20,7 @@ public class Solution {
                     M[M_i][M_j] = in.nextInt();
                 }
             }
-            ////////////////////////////////////////////
+            
             
             
             //Create a bag for the amount of  each ball and the sizes of containers
