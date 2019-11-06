@@ -20,6 +20,7 @@ public class Solution {
         {
             n = 2;
         }
+        
         else if(n > 3) //We are in a repeated pattern(See example above) so we only do either 5 or 7 iterations
         {
             n = (n % 4)+4;
