@@ -7,7 +7,8 @@ import java.util.regex.*;
 public class Solution {
 
 
-    static int pageCount(int n, int p) {
+    static int pageCount(int n, int p) 
+    {
         
         
          int pagecount=0;
