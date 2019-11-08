@@ -6,13 +6,14 @@ import java.util.regex.*;
 
 public class Solution {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int[] scores = new int[n];
-        int[] ranks = new int[n]; //The dense ranking of the scores
+        int[] ranks = new int[n]; 
         
-        //Initialize dense ranking and scores
+        
         for(int i=0, rank=1; i < n; i++){
             int s = in.nextInt();
             scores[i] = s;
