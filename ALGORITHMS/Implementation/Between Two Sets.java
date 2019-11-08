@@ -14,7 +14,8 @@ class Result {
 
     
 
-    public static int getTotalX(List<Integer> a, List<Integer> b) {
+    public static int getTotalX(List<Integer> a, List<Integer> b)
+    {
     
  
     int countone;
