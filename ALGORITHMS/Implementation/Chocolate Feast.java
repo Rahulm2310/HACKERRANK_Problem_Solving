@@ -27,7 +27,9 @@ public class Solution {
                 ate += chocolates / m;
                 chocolates = (chocolates / m) + (chocolates % m);
             }
+            
             System.out.println(ate);
+            
         }
     }
 }
