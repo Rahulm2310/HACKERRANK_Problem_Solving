@@ -9,7 +9,9 @@ import java.util.regex.*;
 public class Solution {
 
 
-    static String angryProfessor(int k, int[] a) {
+    static String angryProfessor(int k, int[] a)
+    {
+        
         int present=0;
         String s=new String("");
         for(int i=0;i<a.length;i++)
