@@ -80,7 +80,9 @@ public class Solution {
 
             if (i != result.length - 1)
             {
+               
                 bufferedWriter.write("\n");
+               
             }
             
         }
