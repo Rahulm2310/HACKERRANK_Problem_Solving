@@ -10,7 +10,7 @@ public class Solution {
         int M = input.nextInt();
         
         HashMap<Integer, String> words = new HashMap<>();
-        ///////////////////////////////////////////////////////
+    
         words.put(1,"one");words.put(2,"two");
         words.put(3,"three");words.put(4,"four");
         words.put(5,"five");words.put(6,"six");
