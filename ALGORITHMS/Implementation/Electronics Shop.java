@@ -7,7 +7,8 @@ import java.util.regex.*;
 public class Solution {
 
     
-    static int getMoneySpent(int[] keyboards, int[] drives, int b) {
+    static int getMoneySpent(int[] keyboards, int[] drives, int b) 
+    {
         
         
          int maxprice=0;
