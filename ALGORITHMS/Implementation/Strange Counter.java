@@ -22,7 +22,7 @@ public class Solution {
             upperValue = upperBound + 2;
         }
         
-        //When t is on a boundry        
+        //When t is on a boundry      
         if(t == upperBound)
         {
             System.out.println(upperValue);
