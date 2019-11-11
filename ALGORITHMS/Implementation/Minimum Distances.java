@@ -1,77 +1,67 @@
 import java.io.*;
-import java.util.*;
-import java.text.*;
 import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
 import java.util.regex.*;
 
 public class Solution {
 
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int A[] = new int[n];
-        for(int A_i=0; A_i < n; A_i++){
-            A[A_i] = in.nextInt();
-        }
-        
-        
-        
-        /* 
-        First Iteration
-        
-        [7 1 3 4 1 7]
-        
-        Set _______       runnningMin
-            7 : 5 /            3
-            1 : 1 
-            3 : 3
-            4 : 2
-            
-        
-        -store the shortest so far for a pair
-        -store the starting point of possible future pairs
-        -update start point to the end point if 
-        TC: O(n^2) SC: O(n)
-        
-        
-        
-        Second Iteration
-        
-        instead of incrementing our distance each time we move our starting
-        point to the right, we are going to just store the index of each value
-        
-        This is now TC: O(n) SC: O(n)
-        
-        */
-        
-        HashMap<Integer,Integer> distances = new HashMap<>();
-        
-        int minDistance = -1;
-        
-        for(int i = 0; i < n; i++)
+    
+    static int minimumDistances(int[] a) {
+        int mindistance=a.length;
+        boolean flag=false;
+        for(int i=0;i<a.length;i++)
         {
-            if(distances.containsKey(A[i]))
+            for(int j=i+1;j<a.length;j++)
             {
-                //Calculate distance between like numbers
-                int distance = Math.abs(distances.get(A[i]) - i);
-                
-                if( distance < minDistance || minDistance == -1)
+                if(a[i]==a[j])
                 {
-                    minDistance = distance;
+                   if(mindistance>(j-i))
+                   {
+                       mindistance=j-i;
+                       flag=true;
+                   }
                 }
-                
-                //Set start point to the old end point
-                distances.put(A[i], i);
-            }
-            else
-            {
-                //Add a new starting point
-                distances.put(A[i], i);
             }
         }
-        
-        System.out.println(minDistance);
-        
-        
+
+        if(flag)
+        {
+            return mindistance;
+        }
+
+        return -1;
+
+
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException {
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int n = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        int[] a = new int[n];
+
+        String[] aItems = scanner.nextLine().split(" ");
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        for (int i = 0; i < n; i++) {
+            int aItem = Integer.parseInt(aItems[i]);
+            a[i] = aItem;
+        }
+
+        int result = minimumDistances(a);
+
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
+
+        bufferedWriter.close();
+
+        scanner.close();
     }
 }
