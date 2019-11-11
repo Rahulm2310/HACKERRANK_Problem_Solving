@@ -4,13 +4,13 @@ import java.util.*;
 public class Solution {
 
     public static void main(String[] args) {
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
         Scanner input = new Scanner(System.in);
         int T = input.nextInt();
         
         for(int i = 0; i < T; i++)
         {
-            int n = input.nextInt()-1;//Minus 1 to account for 0 starting stone
+            int n = input.nextInt()-1;
             int a = input.nextInt();
             int b = input.nextInt();
             
