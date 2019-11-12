@@ -1,5 +1,4 @@
-//Problem: https://www.hackerrank.com/challenges/jumping-on-the-clouds-revisited
-//Java 8
+
 import java.io.*;
 import java.util.*;
 import java.text.*;
@@ -21,13 +20,13 @@ public class Solution {
         int cloud = 0;
         do
         {
-            energy--; //You performed a jump
+            energy--; 
             
             cloud = (cloud + k) % n;
             
             if(c[cloud] == 1)
             {
-                energy -= 2;//You landed on a thundercloud
+                energy -= 2;
             }
         }
         while(cloud != 0);
