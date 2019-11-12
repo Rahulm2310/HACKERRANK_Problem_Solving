@@ -16,20 +16,20 @@ class Result {
     public static int pickingNumbers(List<Integer> a)
     {
    
-    int count=0;
-    
-    for(int i=0;i<a.size();i++)
-    {
-    
-        if(count<(Collections.frequency(a,a.get(i))+Collections.frequency(a,a.get(i)+1)))
-        {
-          count=Collections.frequency(a,a.get(i))+Collections.frequency(a,a.get(i)+1);
-         }
-         
-    }
+      int count=0;
+
+      for(int i=0;i<a.size();i++)
+      {
+
+          if(count<(Collections.frequency(a,a.get(i))+Collections.frequency(a,a.get(i)+1)))
+          {
+            count=Collections.frequency(a,a.get(i))+Collections.frequency(a,a.get(i)+1);
+           }
+
+      }
 
 
-    return count;
+      return count;
     
     }
 
