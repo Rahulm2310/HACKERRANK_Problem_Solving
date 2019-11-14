@@ -23,10 +23,13 @@ public class Solution {
                 
                     for(int j=(a.length)-1;j>=1;j--)
                     {
+                        
                         a[j]=a[j-1];
 
                     }
+                
                 a[0]=temp;
+                
             }
         }
         
