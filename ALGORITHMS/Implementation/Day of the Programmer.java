@@ -40,16 +40,20 @@ public class Solution {
                 day="12.09."+year;
             }
             
+            
             else
             {
                day="13.09."+year;
             }
             
+            
         }
         
         else if(year==1918)
         {
+            
             day="26.09."+year;
+            
         }
 
 
@@ -60,6 +64,7 @@ public class Solution {
 
     public static void main(String[] args) throws IOException
     {
+        
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
         
