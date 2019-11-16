@@ -1,10 +1,14 @@
 import java.io.*;
 import java.util.*;
 
-public class Solution {
-    public static void main(String[] args) {
+public class Solution 
+{
+    
+    public static void main(String[] args)
+    {
         
         Scanner input = new Scanner(System.in);
+        
         int[][][] possiblePermutations = {
             {{8, 1, 6}, {3, 5, 7}, {4, 9, 2}},// 1
 
@@ -33,14 +37,20 @@ public class Solution {
         int minCost = Integer.MAX_VALUE;
         for (int permutation = 0; permutation < 8; permutation++) 
         {
+            
             int permutationCost = 0;
+            
             for (int i = 0; i < 3; i++) 
             {
                 for (int j = 0; j < 3; j++)
+                    
                     permutationCost += Math.abs(given[i][j] - possiblePermutations[permutation][i][j]);
             }
+            
             minCost = Math.min(minCost, permutationCost);
         }
+        
         System.out.println(minCost);
+        
     }
 }
