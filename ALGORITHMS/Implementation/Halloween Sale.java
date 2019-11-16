@@ -11,13 +11,19 @@ public class Solution {
 
     static int howManyGames(int p, int d, int m, int s) {
         int count = 0;
-        while(s>=p){
+        
+        while(s>=p)
+        {
             count++;
             s -=p;
             p = Math.max(p-d,m);
+            
         }
+        
         return count;
     }
+    
+    
 
     private static final Scanner scanner = new Scanner(System.in);
 
