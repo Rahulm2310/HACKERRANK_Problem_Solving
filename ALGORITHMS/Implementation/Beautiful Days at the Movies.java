@@ -25,9 +25,11 @@ public class Solution {
             
             while(m!=0)
             {
+                
                 reverse = reverse * 10;
                 reverse = reverse + m%10;
                 m = m/10;
+                
             }
             
 
@@ -42,6 +44,8 @@ public class Solution {
         return count;
 
     }
+    
+    
 
     private static final Scanner scanner = new Scanner(System.in);
 
