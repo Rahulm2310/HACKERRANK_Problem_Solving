@@ -10,12 +10,16 @@ import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
+
+
 public class Solution {
 
+    
     
     static void bonAppetit(List<Integer> bill, int k, int b)
     {
     
+        
         int total=0;
         
         for(int i=0;i<bill.size();i++)
@@ -24,6 +28,7 @@ public class Solution {
            total+=bill.get(i);
            
         }
+        
         
         
         total=total-bill.get(k);
@@ -35,6 +40,7 @@ public class Solution {
             
         }
         
+        
         else
         {
         
@@ -45,10 +51,12 @@ public class Solution {
     }
     
     
+    
 
     public static void main(String[] args) throws IOException
     {
     
+        
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         String[] nk = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
@@ -57,6 +65,8 @@ public class Solution {
 
         int k = Integer.parseInt(nk[1]);
 
+        
+        
         List<Integer> bill = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
             .map(Integer::parseInt)
             .collect(toList());
@@ -67,6 +77,8 @@ public class Solution {
         bonAppetit(bill, k, b);
 
         bufferedReader.close();
+        
+        
         
         
     }
